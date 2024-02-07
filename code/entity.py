@@ -10,7 +10,7 @@ class Entity(pygame.sprite.Sprite):
         self.keylistener = keylistener
         self.spritesheet = pygame.image.load("../assets/sprite/hero_01_red_m_walk.png")
         self.image = Tool.split_image(self.spritesheet, 0, 0, 24, 32)
-        self.position = [0, 0]
+        self.position = [500, 475]
         self.rect: pygame.Rect = pygame.Rect(0, 0, 16, 32)
         self.all_images = self.get_all_images()
     def update(self):
