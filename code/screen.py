@@ -20,4 +20,3 @@ class Screen:
 
     def get_display(self):
         return self.display
-
