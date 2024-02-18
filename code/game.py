@@ -2,26 +2,26 @@ import pygame
 
 from screen import Screen
 from map import Map
-from entity import Entity
+from player import Player
 from keylistener import KeyListener
 
 
 class Game:
     def __init__(self):
-        self.running = True
-        self.screen = Screen()
-        self.map = Map(self.screen)
-        self.keylistener = KeyListener()
-        self.entity = Entity(self.keylistener)
-        self.map.add_player(self.entity)
+        self.running: bool = True
+        self.screen: Screen = Screen()
+        self.map: Map = Map(self.screen)
+        self.keylistener: KeyListener = KeyListener()
+        self.player: Player = Player(self.keylistener, self.screen, 176, 49)
+        self.map.add_player(self.player)
 
-    def run(self):
+    def run(self) -> None:
         while self.running:
             self.handle_input()
             self.map.update()
             self.screen.update()
 
-    def handle_input(self):
+    def handle_input(self) -> None:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
