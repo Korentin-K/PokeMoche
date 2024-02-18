@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="8">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="10">
  <tileset firstgid="1" source="tileset/map2.tsx"/>
  <layer id="1" name="Calque de Tuiles 1" width="20" height="20">
   <data encoding="csv">
@@ -41,6 +41,12 @@
   <objectgroup id="5" name="interface3">
    <object id="6" name="switch centrePokemonZone3 1" x="96" y="256" width="16" height="16"/>
    <object id="7" name="spawn centrePokemonZone3 1" x="98.3481" y="287.668">
+    <point/>
+   </object>
+  </objectgroup>
+  <objectgroup id="6" name="Interface4">
+   <object id="8" name="switch boutiquePokemonZone3 2" x="224" y="96" width="16" height="16"/>
+   <object id="9" name="spawn boutiquePokemonZone3 2" x="236.5" y="141">
     <point/>
    </object>
   </objectgroup>
