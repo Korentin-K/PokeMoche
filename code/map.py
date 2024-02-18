@@ -16,6 +16,7 @@ class Map:
 
         self.player: Player | None = None
         self.switchs: list[Switch]  # type, nom carte, coords zone, port d'entrée/sortie
+        self.collisions: list[pygame.Rect] | None = None
         self.current_map: Switch = Switch("switch", "zone1", pygame.Rect(0, 0, 0, 0), 0)
 
         self.switch_map(self.current_map)
@@ -28,8 +29,11 @@ class Map:
         self.group = pyscroll.PyscrollGroup(map_layer=self.map_layer, default_layer=7)
 
         self.switchs = []
+        self.collisions = []
 
         for obj in self.tmx_data.objects:
+            if obj.name == "collision":
+                self.collisions.append(pygame.Rect(obj.x, obj.y, obj.width, obj.height))
             type = obj.name.split(" ")[0]
 
             if type == "switch":
@@ -44,6 +48,7 @@ class Map:
             self.player.align_hitbox()
             self.player.step = 16
             self.player.add_switchs(self.switchs)
+            self.player.add_collisions(self.collisions)
             self.group.add(self.player)
             if switch.name.split(" ")[0] != "zone1" and switch.name.split(" ")[0]!="zone2" and switch.name.split(" ")[0]!="zone3" and switch.name.split(" ")[0]!="zone4" and switch.name.split(" ")[0]!="zone5":
                 self.player.switch_bike(True)
@@ -57,6 +62,7 @@ class Map:
         self.player.align_hitbox()
         self.player.step = 16
         self.player.add_switchs(self.switchs)
+        self.player.add_collisions(self.collisions)
 
     def update(self):
         if self.player:
