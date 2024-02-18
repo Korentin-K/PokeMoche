@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
- <tileset firstgid="1" source="../rosyeres.tsx"/>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="8">
+ <tileset firstgid="1" source="tileset/map2.tsx"/>
  <layer id="1" name="Calque de Tuiles 1" width="20" height="20">
   <data encoding="csv">
 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,
@@ -25,4 +25,24 @@
 381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400
 </data>
  </layer>
+ <group id="2" name="object">
+  <objectgroup id="3" name="interface">
+   <object id="1" name="switch zone2 0" x="128" y="308.567" width="44.1091" height="11.433"/>
+   <object id="2" name="spawn zone2 0" x="169.036" y="299.347">
+    <point/>
+   </object>
+  </objectgroup>
+  <objectgroup id="4" name="interface2">
+   <object id="3" name="switch zone4 0" x="0" y="160" width="16" height="32"/>
+   <object id="4" name="spawn zone4 0" x="19.0549" y="176.412">
+    <point/>
+   </object>
+  </objectgroup>
+  <objectgroup id="5" name="interface3">
+   <object id="6" name="switch centrePokemonZone3 1" x="96" y="256" width="16" height="16"/>
+   <object id="7" name="spawn centrePokemonZone3 1" x="98.3481" y="287.668">
+    <point/>
+   </object>
+  </objectgroup>
+ </group>
 </map>
