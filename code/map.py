@@ -42,8 +42,11 @@ class Map:
         if self.player:
             self.pose_player(switch)
             self.player.align_hitbox()
+            self.player.step = 16
             self.player.add_switchs(self.switchs)
             self.group.add(self.player)
+            if switch.name.split(" ")[0] != "zone1" and switch.name.split(" ")[0]!="zone2" and switch.name.split(" ")[0]!="zone3" and switch.name.split(" ")[0]!="zone4" and switch.name.split(" ")[0]!="zone5":
+                self.player.switch_bike(True)
 
         self.current_map = switch
 

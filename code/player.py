@@ -11,10 +11,13 @@ class Player(Entity):
         super().__init__(keylistener, screen, x, y)
         self.pokedollars: int = 0
 
+        self.spritesheet_bike: pygame.image = pygame.image.load("../assets/sprite/hero_01_red_m_cycle_roll.png")
+
         self.switchs: list[Switch] | None = None
         self.change_map: Switch | None = None
 
     def update(self) -> None:
+        self.check_input()
         self.check_move()
         super().update()
 
@@ -48,3 +51,16 @@ class Player(Entity):
 
                     self.change_map = switch
         return None
+
+    def check_input(self):
+        if self.keylistener.key_pressed(pygame.K_b):
+            self.switch_bike()
+
+    def switch_bike(self, deactive=False):
+        if self.speed == 1 and not deactive:
+            self.speed = 2
+            self.all_images = self.get_all_images(self.spritesheet_bike)
+        else:
+            self.speed = 1
+            self.all_images = self.get_all_images(self.spritesheet)
+        self.keylistener.remove_key(pygame.K_b)
