@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="38">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="40">
  <tileset firstgid="1" source="tileset/clementi-ville.tsx"/>
  <layer id="1" name="Calque de Tuiles 1" width="30" height="30">
   <data encoding="csv">
@@ -36,20 +36,19 @@
 </data>
  </layer>
  <group id="3" name="Object">
-  <objectgroup id="5" name="interface3" visible="0">
+  <objectgroup id="5" name="interface3">
    <object id="6" name="switch boutiquePokemonZone5 2" x="400" y="192" width="16" height="16"/>
    <object id="7" name="spawn boutiquePokemonZone5 2" x="408" y="233">
     <point/>
    </object>
   </objectgroup>
-  <objectgroup id="6" name="interface4" visible="0">
+  <objectgroup id="6" name="interface4">
    <object id="8" name="switch arene 3" x="240" y="128" width="16" height="16"/>
    <object id="9" name="spawn arene 3" x="248.5" y="165">
     <point/>
    </object>
   </objectgroup>
-  <objectgroup id="7" name="collision">
-   <object id="10" name="collision" x="-6.66667" y="192" width="12.6667" height="32"/>
+  <objectgroup id="7" name="collision" visible="0">
    <object id="11" name="collision" x="0" y="224" width="32" height="256"/>
    <object id="12" name="collision" x="32" y="480" width="48"/>
    <object id="14" name="collision" x="32" y="224" width="80" height="224"/>
@@ -75,13 +74,19 @@
    <object id="36" name="collision" x="144" y="140" width="16" height="20"/>
    <object id="37" name="collision" x="288" y="64" width="16" height="96"/>
   </objectgroup>
-  <objectgroup id="4" name="interface2" visible="0">
+  <objectgroup id="8" name="interface5">
+   <object id="38" name="switch zone7 4" x="0" y="192" width="16" height="32"/>
+   <object id="39" name="spawn zone7 4" x="45.3333" y="206.667">
+    <point/>
+   </object>
+  </objectgroup>
+  <objectgroup id="4" name="interface2">
    <object id="3" name="switch centrePokemonZone5 1" x="320" y="256" width="16" height="16"/>
    <object id="5" name="spawn centrePokemonZone5 1" x="327.333" y="293.333">
     <point/>
    </object>
   </objectgroup>
-  <objectgroup id="2" name="interface" visible="0">
+  <objectgroup id="2" name="interface">
    <object id="1" name="switch zone4 0" x="464" y="256" width="16" height="64"/>
    <object id="2" name="spawn zone4 0" x="462.565" y="289.993">
     <point/>
