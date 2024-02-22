@@ -9,6 +9,8 @@ class Screen:
         self.clock = pygame.time.Clock()
         self.framerate: int = 60
         self.deltatime: float = 0.0
+        logo = pygame.image.load("../assets/sprite/pokeball.png")
+        pygame.display.set_icon(logo)
 
     def update(self):
         pygame.display.flip()
