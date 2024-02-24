@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="48" height="44" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="8">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="48" height="44" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="63">
  <tileset firstgid="1" source="tileset/bois-clementi.tsx"/>
  <layer id="1" name="Calque de Tuiles 1" width="48" height="44">
   <data encoding="csv">
@@ -50,19 +50,72 @@
 </data>
  </layer>
  <group id="3" name="object">
-  <objectgroup id="2" name="interface">
+  <objectgroup id="6" name="collision">
+   <object id="8" name="collision" x="0" y="0" width="224" height="96"/>
+   <object id="9" name="collision" x="256" y="0" width="504.188" height="59.145"/>
+   <object id="10" name="collision" x="256" y="64" width="257.17" height="30.806"/>
+   <object id="11" name="collision" x="288" y="96" width="128" height="32"/>
+   <object id="12" name="collision" x="432" y="96" width="64" height="32"/>
+   <object id="13" name="collision" x="288" y="128" width="96" height="32"/>
+   <object id="14" name="collision" x="448" y="160" width="96" height="32"/>
+   <object id="15" name="collision" x="592" y="96" width="64" height="64"/>
+   <object id="16" name="collision" x="656" y="128" width="80" height="16"/>
+   <object id="17" name="collision" x="704" y="64" width="64" height="32"/>
+   <object id="18" name="collision" x="736" y="96" width="32" height="512"/>
+   <object id="19" name="collision" x="736" y="608" width="32" height="96"/>
+   <object id="20" name="collision" x="704" y="448" width="32" height="256"/>
+   <object id="21" name="collision" x="576" y="416" width="32" height="128"/>
+   <object id="23" name="collision" x="608" y="448" width="32" height="96"/>
+   <object id="24" name="collision" x="640" y="480" width="64" height="64"/>
+   <object id="25" name="collision" x="672" y="544" width="32" height="160"/>
+   <object id="26" name="collision" x="640" y="608" width="32" height="96"/>
+   <object id="27" name="collision" x="608" y="640" width="32" height="64"/>
+   <object id="28" name="collision" x="608" y="608" width="32" height="16"/>
+   <object id="29" name="collision" x="544" y="608" width="32" height="16"/>
+   <object id="31" name="collision" x="544" y="640" width="32" height="64"/>
+   <object id="33" name="collision" x="320" y="576" width="224" height="128"/>
+   <object id="34" name="collision" x="288" y="640" width="32" height="64"/>
+   <object id="35" name="collision" x="288" y="608" width="32" height="16"/>
+   <object id="36" name="collision" x="224" y="608" width="32" height="16"/>
+   <object id="37" name="collision" x="224" y="640" width="32" height="64"/>
+   <object id="38" name="collision" x="512" y="512" width="64" height="16"/>
+   <object id="40" name="collision" x="288" y="192" width="352" height="32"/>
+   <object id="41" name="collision" x="304" y="224" width="352" height="32"/>
+   <object id="42" name="collision" x="448" y="256" width="224" height="64"/>
+   <object id="43" name="collision" x="448" y="320" width="96" height="32"/>
+   <object id="44" name="collision" x="576" y="320" width="96" height="32"/>
+   <object id="45" name="collision" x="608" y="352" width="64" height="32"/>
+   <object id="46" name="collision" x="448" y="352" width="64" height="192"/>
+   <object id="47" name="collision" x="352" y="448" width="96" height="64"/>
+   <object id="48" name="collision" x="416" y="512" width="32" height="32"/>
+   <object id="49" name="collision" x="256" y="320" width="160" height="64"/>
+   <object id="50" name="collision" x="192" y="352" width="64" height="16"/>
+   <object id="51" name="collision" x="224" y="224" width="80" height="16"/>
+   <object id="52" name="collision" x="183.524" y="134.816"/>
+   <object id="53" name="collision" x="0" y="96" width="192" height="32"/>
+   <object id="54" name="collision" x="0" y="128" width="64" height="576"/>
+   <object id="55" name="collision" x="64" y="320" width="128" height="64"/>
+   <object id="56" name="collision" x="64" y="384" width="32" height="32"/>
+   <object id="57" name="collision" x="128" y="192" width="96" height="64"/>
+   <object id="58" name="collision" x="160" y="448" width="96" height="64"/>
+   <object id="59" name="collision" x="234.841" y="521.868"/>
+   <object id="60" name="collision" x="256" y="480" width="96" height="16"/>
+   <object id="61" name="collision" x="64" y="544" width="32" height="160"/>
+   <object id="62" name="collision" x="96" y="576" width="128" height="128"/>
+  </objectgroup>
+  <objectgroup id="2" name="interface" visible="0">
    <object id="1" name="switch zone7 1" x="256" y="688" width="32" height="16"/>
    <object id="2" name="spawn zone7 1" x="268.762" y="644.507">
     <point/>
    </object>
   </objectgroup>
-  <objectgroup id="4" name="interface2">
+  <objectgroup id="4" name="interface2" visible="0">
    <object id="6" name="spawn zone9 3" x="242" y="71">
     <point/>
    </object>
    <object id="7" name="switch zone9 3" x="224" y="0" width="32" height="16"/>
   </objectgroup>
-  <objectgroup id="5" name="interface3">
+  <objectgroup id="5" name="interface3" visible="0">
    <object id="3" name="switch zone7 2" x="576" y="688" width="32" height="16"/>
    <object id="4" name="spawn zone7 2" x="589" y="651">
     <point/>

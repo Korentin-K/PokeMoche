@@ -34,14 +34,15 @@ class Map:
         for obj in self.tmx_data.objects:
             if obj.name == "collision":
                 self.collisions.append(pygame.Rect(obj.x, obj.y, obj.width, obj.height))
+
             type = obj.name.split(" ")[0]
+            print(type)
 
             if type == "switch":
                 self.switchs.append(Switch(
                     type, obj.name.split(" ")[1], pygame.Rect(obj.x, obj.y, obj.width, obj.height),
                     int(obj.name.split(" ")[-1])
                 ))  # recup infos de zone declenchement changement de carte
-                
 
         if self.player:
             self.pose_player(switch)
@@ -50,7 +51,7 @@ class Map:
             self.player.add_switchs(self.switchs)
             self.player.add_collisions(self.collisions)
             self.group.add(self.player)
-            if switch.name.split(" ")[0] != "zone1" and switch.name.split(" ")[0]!="zone2" and switch.name.split(" ")[0]!="zone3" and switch.name.split(" ")[0]!="zone4" and switch.name.split(" ")[0]!="zone5":
+            if switch.name.split(" ")[0] != "zone1" and switch.name.split(" ")[0]!="zone2" and switch.name.split(" ")[0]!="zone3" and switch.name.split(" ")[0]!="zone4" and switch.name.split(" ")[0]!="zone5" and switch.name.split(" ")[0]!="zone6" and switch.name.split(" ")[0]!="zone7" and switch.name.split(" ")[0]!="zone8" and switch.name.split(" ")[0]!="zone9" and switch.name.split(" ")[0]!="zone10" and switch.name.split(" ")[0]!="zone11":
                 self.player.switch_bike(True)
 
         self.current_map = switch
