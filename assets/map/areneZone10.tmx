@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="11" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="27">
+ <tileset firstgid="1" source="tileset/arene-merouville.tsx"/>
+ <layer id="1" name="Calque de Tuiles 1" width="11" height="20">
+  <data encoding="csv">
+1,2,3,4,5,6,7,8,9,10,11,
+12,13,14,15,16,17,18,19,20,21,22,
+23,24,25,26,27,28,29,30,31,32,33,
+34,35,36,37,38,39,40,41,42,43,44,
+45,46,47,48,49,50,51,52,53,54,55,
+56,57,58,59,60,61,62,63,64,65,66,
+67,68,69,70,71,72,73,74,75,76,77,
+78,79,80,81,82,83,84,85,86,87,88,
+89,90,91,92,93,94,95,96,97,98,99,
+100,101,102,103,104,105,106,107,108,109,110,
+111,112,113,114,115,116,117,118,119,120,121,
+122,123,124,125,126,127,128,129,130,131,132,
+133,134,135,136,137,138,139,140,141,142,143,
+144,145,146,147,148,149,150,151,152,153,154,
+155,156,157,158,159,160,161,162,163,164,165,
+166,167,168,169,170,171,172,173,174,175,176,
+177,178,179,180,181,182,183,184,185,186,187,
+188,189,190,191,192,193,194,195,196,197,198,
+199,200,201,202,203,204,205,206,207,208,209,
+210,211,212,213,214,215,216,217,218,219,220
+</data>
+ </layer>
+ <group id="3" name="object">
+  <objectgroup id="2" name="interface" visible="0">
+   <object id="1" name="switch zone10 8" x="80" y="304" width="32" height="16"/>
+   <object id="2" name="spawn zone10 8" x="92.9083" y="286.632">
+    <point/>
+   </object>
+  </objectgroup>
+  <objectgroup id="4" name="collision">
+   <object id="3" name="collision" x="0" y="89.0932" width="12.0465" height="166.907"/>
+   <object id="4" name="collision" x="48" y="90.465" width="128" height="33.5815"/>
+   <object id="5" name="collision" x="48" y="32" width="16" height="32"/>
+   <object id="6" name="collision" x="112" y="32" width="16" height="32"/>
+   <object id="7" name="collision" x="0" y="0" width="16" height="48"/>
+   <object id="8" name="collision" x="16" y="0" width="160" height="32"/>
+   <object id="9" name="collision" x="160" y="32" width="16" height="16"/>
+   <object id="10" name="collision" x="150.326" y="128" width="25.6743" height="128"/>
+   <object id="11" name="collision" x="128" y="272" width="16" height="32"/>
+   <object id="12" name="collision" x="32" y="272" width="16" height="32"/>
+   <object id="13" name="collision" x="96" y="240" width="32" height="16"/>
+   <object id="14" name="collision" x="96" y="194.768" width="48" height="13.2326"/>
+   <object id="15" name="collision" x="96" y="144" width="28.0465" height="23.6976"/>
+   <object id="16" name="collision" x="64" y="146.372" width="16" height="45.6279"/>
+   <object id="17" name="collision" x="32" y="169.674" width="32" height="22.3257"/>
+   <object id="18" name="collision" x="112" y="208" width="32" height="16"/>
+   <object id="19" name="collision" x="32" y="208.791" width="32" height="47.2093"/>
+   <object id="20" name="collision" x="64" y="240" width="16" height="16"/>
+   <object id="21" name="collision" x="-3.16284" y="48" width="4.74426" height="48"/>
+   <object id="22" name="collision" x="174.747" y="47.9545" width="4.74426" height="48"/>
+   <object id="23" name="collision" x="173.165" y="257.492" width="4.74426" height="63.4188"/>
+   <object id="24" name="collision" x="-1.97678" y="254.33" width="4.74426" height="66.5817"/>
+   <object id="25" name="collision" x="1.18606" y="320.21" width="80" height="16"/>
+   <object id="26" name="collision" x="110.814" y="320.21" width="64" height="8.88362"/>
+  </objectgroup>
+ </group>
+</map>

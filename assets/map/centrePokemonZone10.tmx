@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="16" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="18">
+ <tileset firstgid="1" source="tileset/centre-pokemon.tsx"/>
+ <layer id="1" name="Calque de Tuiles 1" width="16" height="10">
+  <data encoding="csv">
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,
+17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,
+33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,
+49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,
+65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,
+81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,
+97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,
+113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,
+129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,
+145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160
+</data>
+ </layer>
+ <group id="3" name="object">
+  <objectgroup id="2" name="interface" visible="0">
+   <object id="1" name="switch zone10 4" x="112" y="144" width="32" height="16"/>
+   <object id="3" name="spawn zone10 4" x="128" y="125.333">
+    <point/>
+   </object>
+  </objectgroup>
+  <objectgroup id="4" name="collision">
+   <object id="4" name="collision" x="0" y="16" width="9.05082" height="73.5656"/>
+   <object id="5" name="collision" x="0" y="0" width="256" height="16"/>
+   <object id="6" name="collision" x="72.0213" y="47.7426" width="112" height="17.5443"/>
+   <object id="7" name="collision" x="9.17871" y="16" width="86.8213" height="32"/>
+   <object id="8" name="collision" x="160" y="16" width="39.5066" height="32"/>
+   <object id="9" name="collision" x="198.734" y="16" width="52.9802" height="20.5475"/>
+   <object id="10" name="collision" x="249.008" y="0" width="6.99181" height="160"/>
+   <object id="11" name="collision" x="144" y="155.839" width="112" height="4.16066"/>
+   <object id="12" name="collision" x="240.729" y="103.721" width="8.06394" height="32.2574"/>
+   <object id="13" name="collision" x="183.764" y="105.051" width="30.7131" height="22.4344"/>
+   <object id="14" name="collision" x="183.764" y="93.3836" width="31.4426" height="10.5951"/>
+   <object id="15" name="collision" x="0" y="128" width="7.50656" height="32"/>
+   <object id="16" name="collision" x="6.47705" y="154.81" width="105.523" height="5.19017"/>
+   <object id="17" name="collision" x="-0.278693" y="89.3959" width="6.21968" height="38.9492"/>
+  </objectgroup>
+ </group>
+</map>
