@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="29" height="37" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="5">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="29" height="37" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="21">
  <tileset firstgid="1" source="tileset/arene-clementi-ville.tsx"/>
  <layer id="1" name="Calque de Tuiles 1" width="29" height="37">
   <data encoding="csv">
@@ -43,6 +43,23 @@
 </data>
  </layer>
  <group id="2" name="object">
+  <objectgroup id="7" name="collision">
+   <object id="5" name="collision" x="304.265" y="4.38844" width="164.298" height="117.029"/>
+   <object id="6" name="collision" x="-0.23153" y="1.46079" width="164.298" height="117.029"/>
+   <object id="7" name="collision" x="384" y="128" width="80" height="112"/>
+   <object id="8" name="collision" x="0" y="112" width="80" height="128"/>
+   <object id="9" name="collision" x="308.934" y="246.488" width="20.938" height="112"/>
+   <object id="10" name="collision" x="227.969" y="123.194" width="20.938" height="112"/>
+   <object id="11" name="collision" x="139.469" y="243.145" width="20.938" height="112"/>
+   <object id="12" name="collision" x="225.044" y="366.021" width="20.938" height="112"/>
+   <object id="13" name="collision" x="389.839" y="365.897" width="80" height="223.909"/>
+   <object id="14" name="collision" x="308.93" y="482.194" width="80" height="112"/>
+   <object id="15" name="collision" x="-0.504077" y="364.191" width="80" height="223.909"/>
+   <object id="17" name="collision" x="84.339" y="484.509" width="80" height="112"/>
+   <object id="18" name="collision" x="162.835" y="-16" width="141.165" height="16"/>
+   <object id="19" name="collision" x="-16" y="240" width="16" height="128"/>
+   <object id="20" name="collision" x="464" y="240" width="32" height="128"/>
+  </objectgroup>
   <objectgroup id="3" name="interface">
    <object id="2" name="switch zone5 3" x="224" y="582" width="32" height="10"/>
    <object id="3" name="spawn zone5 3" x="239.333" y="562">

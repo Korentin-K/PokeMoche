@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="16" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="3">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="16" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="43">
  <tileset firstgid="1" source="tileset/centre-pokemon.tsx"/>
  <layer id="1" name="Calque de Tuiles 1" width="16" height="10">
   <data encoding="csv">
@@ -21,6 +21,22 @@
    <object id="2" name="spawn zone5 1" x="126.887" y="123.541">
     <point/>
    </object>
+  </objectgroup>
+  <objectgroup id="4" name="collision">
+   <object id="29" name="collision" x="0.173729" y="15.7868" width="9.05082" height="73.5656"/>
+   <object id="30" name="collision" x="0.173729" y="-0.213225" width="256" height="16"/>
+   <object id="31" name="collision" x="72.195" y="47.5294" width="112" height="17.0295"/>
+   <object id="32" name="collision" x="9.35244" y="15.7868" width="86.8213" height="32"/>
+   <object id="33" name="collision" x="160.174" y="15.7868" width="39.5066" height="32"/>
+   <object id="34" name="collision" x="198.908" y="15.7868" width="52.9802" height="20.5475"/>
+   <object id="35" name="collision" x="249.182" y="-0.213225" width="6.99181" height="160"/>
+   <object id="36" name="collision" x="144.174" y="155.626" width="112" height="4.16066"/>
+   <object id="37" name="collision" x="239.359" y="103.508" width="9.6082" height="32.2574"/>
+   <object id="38" name="collision" x="183.938" y="104.838" width="30.7131" height="24.4934"/>
+   <object id="39" name="collision" x="183.938" y="95.2294" width="31.4426" height="8.53607"/>
+   <object id="40" name="collision" x="0.173729" y="127.787" width="7.50656" height="32"/>
+   <object id="41" name="collision" x="6.65078" y="154.597" width="105.523" height="5.19017"/>
+   <object id="42" name="collision" x="0.236061" y="89.9106" width="6.21968" height="38.9492"/>
   </objectgroup>
  </group>
 </map>

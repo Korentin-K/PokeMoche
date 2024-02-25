@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="40" height="60" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="70">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="40" height="60" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="76">
  <tileset firstgid="1" source="tileset/merouville.tsx"/>
  <layer id="1" name="Calque de Tuiles 1" width="40" height="60">
   <data encoding="csv">
@@ -72,13 +72,31 @@
     <point/>
    </object>
   </objectgroup>
-  <objectgroup id="4" name="interface2" visible="0">
+  <objectgroup id="6" name="interface3" visible="0">
+   <object id="70" name="switch centrePokemonZone10 4" x="256" y="608" width="16" height="16"/>
+   <object id="71" name="spawn centrePokemonZone10 4" x="260.934" y="655.893">
+    <point/>
+   </object>
+  </objectgroup>
+  <objectgroup id="7" name="interface4">
+   <object id="72" name="switch boutiquePokemonZone10 2" x="256" y="720" width="16" height="16"/>
+   <object id="73" name="spawn boutiquePokemonZone10 2" x="260.934" y="776.872">
+    <point/>
+   </object>
+  </objectgroup>
+  <objectgroup id="8" name="interface5">
+   <object id="74" name="switch areneZone10 8" x="432" y="304" width="16" height="16"/>
+   <object id="75" name="spawn areneZone10 8" x="439.5" y="346.5">
+    <point/>
+   </object>
+  </objectgroup>
+  <objectgroup id="4" name="interface2">
    <object id="3" name="spawn zone11 0" x="571.683" y="179.096">
     <point/>
    </object>
    <object id="4" name="switch zone11 0" x="608" y="144" width="32" height="48"/>
   </objectgroup>
-  <objectgroup id="5" name="collision">
+  <objectgroup id="5" name="collision" visible="0">
    <object id="5" name="collision" x="32" y="640" width="16" height="240"/>
    <object id="6" name="collision" x="48" y="864" width="144" height="16"/>
    <object id="7" name="collision" x="176" y="880" width="16" height="80"/>
