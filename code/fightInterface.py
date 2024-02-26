@@ -1,17 +1,14 @@
-import json
-import datetime
-import pathlib
 import pygame
 
-from pokemoche.code.function.button import Button
-from pokemoche.code.function.attackButton import AttackButton
-from pokemoche.code.function.runButton import RunButton
+from button import Button
+from attackButton import AttackButton
+from runButton import RunButton
 from screen import Screen
-from pokemoche.code.function.lifeBar import lifeBar
-from pokemoche.code.function.showPokemon import ShowPokemon
-from pokemoche.code.function.showWildPokemon import ShowWildPokemon
-from pokemoche.code.function.baseInterface import BaseInterface
-from pokemoche.code.function.attackTypeButton import AttackTypeButton
+from lifeBar import lifeBar
+from showPokemon import ShowPokemon
+from showWildPokemon import ShowWildPokemon
+from baseInterface import BaseInterface
+from attackTypeButton import AttackTypeButton
 
 
 class fightInterface:
