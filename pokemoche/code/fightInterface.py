@@ -36,7 +36,7 @@ class fightInterface:
                     self.running = False
                 elif event.type == pygame.MOUSEBUTTONDOWN:
                     if self.Button1.rect.collidepoint(event.pos):
-                        # If Attack button is clicked, replace buttons
+                        # si le bouton d'attaque est appuyé remplace tout les bouton par les attaques
                         self.Button1 = AttackTypeButton(self.firstButtonX, self.firstButtonY, 12,"Draco-Griffe")
                         self.Button2 = AttackTypeButton(self.firstButtonX + 160, self.firstButtonY, 13,"Draco-Souffle")
                         self.Button3 = AttackTypeButton(self.firstButtonX, self.firstButtonY + 60, 25,"Lance-Flammes")
@@ -56,7 +56,9 @@ class fightInterface:
             self.Button2.draw(self.screen.get_display())
             self.Button3.draw(self.screen.get_display())
             self.Button4.draw(self.screen.get_display())
-            wildLife=lifeBar("Tortank",45,45)
-            wildLife.draw(self.screen.get_display(),self.squareX,self.squareY)
+            wildLife=lifeBar("Tortank",200,200)
+            ourPokeLife=lifeBar("Dracaufeu",220,220)
+            wildLife.drawWildPoke(self.screen.get_display(),self.squareX,self.squareY)
+            ourPokeLife.drawOurPoke(self.screen.get_display(), self.squareX, self.squareY)
             self.screen.update()
 

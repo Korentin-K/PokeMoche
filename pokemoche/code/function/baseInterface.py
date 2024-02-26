@@ -3,7 +3,7 @@ class BaseInterface:
     def drawAll(self,screen,squareX,squareY,pokemonName):
 
         lines = ['Que doit faire', f'{pokemonName} ?']
-        font = pygame.font.Font(f"../assets/font/PressStart2P-Regular.ttf", 12)
+        font = pygame.font.Font(f"../assets/font/PressStart2P-Regular.ttf", 14)
         baseImage = pygame.image.load(f"../assets/sprite/fight/backFight.png").convert_alpha()
         pokeFloor = pygame.image.load(f"../assets/sprite/fight/ourPoke.png").convert_alpha()
         wildFloor = pygame.image.load(f"../assets/sprite/fight/wildPoke.png").convert_alpha()

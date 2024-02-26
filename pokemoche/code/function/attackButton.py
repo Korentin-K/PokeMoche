@@ -5,7 +5,7 @@ class AttackButton:
             self.x = x
             self.y = y
             self.text = "Attaque"
-            self.font = pygame.font.Font(None, 12)
+            self.font = pygame.font.Font(f"../assets/font/PressStart2P-Regular.ttf", 14)
             self.width = 150
             self.height = 50
             self.color = (255, 0, 0)
