@@ -4,7 +4,7 @@ from entity import Entity
 from keylistener import KeyListener
 from screen import Screen
 from switch import Switch
-
+from fightInterface import fightInterface
 
 class Player(Entity):
     def __init__(self, keylistener: KeyListener, screen: Screen, x: int, y: int):
@@ -12,10 +12,11 @@ class Player(Entity):
         self.pokedollars: int = 0
 
         self.spritesheet_bike: pygame.image = pygame.image.load("../assets/sprite/hero_01_red_m_cycle_roll.png")
-
+        self.fightInterface=fightInterface()
         self.switchs: list[Switch] | None = None
         self.collisions: list[pygame.Rect] | None = None
         self.change_map: Switch | None = None
+        self.grass:list[pygame.Rect] | None = None
 
     def update(self) -> None:
         self.check_input()
@@ -28,23 +29,35 @@ class Player(Entity):
             if self.keylistener.key_pressed(pygame.K_q):
                 temp_hitbox.x -= 16
                 if not self.check_collisions(temp_hitbox):
-                    self.check_collisions_switchs(temp_hitbox)
-                    self.move_left()
+                    if self.check_grass(temp_hitbox):
+                        self.fightInterface.startFight()
+                    else:
+                        self.check_collisions_switchs(temp_hitbox)
+                        self.move_left()
             elif self.keylistener.key_pressed(pygame.K_d):
                 temp_hitbox.x += 16
                 if not self.check_collisions(temp_hitbox):
-                    self.check_collisions_switchs(temp_hitbox)
-                    self.move_right()
+                    if self.check_grass(temp_hitbox):
+                        self.fightInterface.startFight()
+                    else:
+                        self.check_collisions_switchs(temp_hitbox)
+                        self.move_right()
             elif self.keylistener.key_pressed(pygame.K_z):
                 temp_hitbox.y -= 16
                 if not self.check_collisions(temp_hitbox):
-                    self.check_collisions_switchs(temp_hitbox)
-                    self.move_up()
+                    if self.check_grass(temp_hitbox):
+                        self.fightInterface.startFight()
+                    else:
+                        self.check_collisions_switchs(temp_hitbox)
+                        self.move_up()
             elif self.keylistener.key_pressed(pygame.K_s):
                 temp_hitbox.y += 16
                 if not self.check_collisions(temp_hitbox):
-                    self.check_collisions_switchs(temp_hitbox)
-                    self.move_down()
+                    if self.check_grass(temp_hitbox):
+                        self.fightInterface.startFight()
+                    else:
+                        self.check_collisions_switchs(temp_hitbox)
+                        self.move_down()
 
     def add_switchs(self, switchs: list[Switch]):
         self.switchs = switchs
@@ -72,6 +85,16 @@ class Player(Entity):
 
     def add_collisions(self, collisions):
         self.collisions = collisions
+
+    def add_grass(self,grass):
+        self.grass = grass
+
+    def check_grass(self, temp_hitbox: pygame.Rect):
+        for grass in self.grass:
+            if temp_hitbox.colliderect(grass):
+                return True
+        return False
+
 
     def check_collisions(self, temp_hitbox: pygame.Rect):
         for collision in self.collisions:

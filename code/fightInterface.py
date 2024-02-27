@@ -12,7 +12,9 @@ from attackTypeButton import AttackTypeButton
 
 
 class fightInterface:
-    def __init__(self):
+    def __init__(self,ourPokeName,wildPokeName):
+        self.ourPokeName = ourPokeName
+        self.wildPokeName = wildPokeName
         self.running = True
         self.screen = Screen()
         self.screenSize = pygame.display.get_surface().get_size()
@@ -43,18 +45,18 @@ class fightInterface:
 
             # Interface de base
             baseInterface = BaseInterface()
-            baseInterface.drawAll(self.screen.get_display(), self.squareX, self.squareY, "Dracaufeu")
+            baseInterface.drawAll(self.screen.get_display(), self.squareX, self.squareY, self.ourPokeName)
             showPokemon=ShowPokemon()
-            showPokemon.draw(self.screen.get_display(),"charizard",self.squareX,self.squareY)
+            showPokemon.draw(self.screen.get_display(),self.ourPokeName,self.squareX,self.squareY)
             showWildPokemon=ShowWildPokemon()
-            showWildPokemon.draw(self.screen.get_display(), "blastoise", self.squareX, self.squareY)
+            showWildPokemon.draw(self.screen.get_display(), self.wildPokeName, self.squareX, self.squareY)
             # Sert à l'agencement des boutons
             self.Button1.draw(self.screen.get_display())
             self.Button2.draw(self.screen.get_display())
             self.Button3.draw(self.screen.get_display())
             self.Button4.draw(self.screen.get_display())
-            wildLife=lifeBar("Tortank",200,200)
-            ourPokeLife=lifeBar("Dracaufeu",220,220)
+            wildLife=lifeBar(self.wildPokeName,200,200)
+            ourPokeLife=lifeBar(self.ourPokeName,220,220)
             wildLife.drawWildPoke(self.screen.get_display(),self.squareX,self.squareY)
             ourPokeLife.drawOurPoke(self.screen.get_display(), self.squareX, self.squareY)
             self.screen.update()
