@@ -12,7 +12,7 @@ class Player(Entity):
         self.pokedollars: int = 0
 
         self.spritesheet_bike: pygame.image = pygame.image.load("../assets/sprite/hero_01_red_m_cycle_roll.png")
-        self.fightInterface=fightInterface()
+        self.fightInterface=fightInterface("Dracaufeu","Tortank")
         self.switchs: list[Switch] | None = None
         self.collisions: list[pygame.Rect] | None = None
         self.change_map: Switch | None = None
