@@ -12,6 +12,8 @@ from fightInterface import fightInterface
 class Player(Entity):
     def __init__(self, keyListener: KeyListener, screen: Screen, x: int, y: int):
         super().__init__(keyListener, screen, x, y)
+        self.in_combat = False
+        self.enabled = True
         self.pokeDollars: int = 0
         self.nbMoves = 0
         self.spriteSheet_bike: pygame.image = pygame.image.load("../assets/sprite/hero_01_red_m_cycle_roll.png")
@@ -29,8 +31,11 @@ class Player(Entity):
         super().update()
 
     def check_move(self) -> None:
+        if not self.enabled or self.in_combat:
+            return
+
         rand = random.randint(1, self.MAX_MOVES)
-        if self.animation_walk is False:
+        if not self.animation_walk:
             temp_hitbox = self.hitbox.copy()
 
             key_actions = {
@@ -48,6 +53,7 @@ class Player(Entity):
                     if not self.check_collisions(temp_hitbox):
                         if self.check_grass(temp_hitbox) and (rand == 1 or self.nbMoves == self.MAX_MOVES):
                             self.fightInterface.startFight()
+                            self.fightInterface.endFight()
                             break
                         else:
                             self.nbMoves += 1
@@ -108,3 +114,12 @@ class Player(Entity):
             if temp_hitbox.colliderect(collision):
                 return True
         return False
+
+    def enable(self):
+        self.enabled = True
+        self.in_combat = False
+        self.keylistener.clear()
+
+    def disable(self):
+        self.enabled = False
+        self.in_combat = False

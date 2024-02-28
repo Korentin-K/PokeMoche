@@ -30,6 +30,7 @@ class fightInterface:
         self.button4 = RunButton(self.firstButtonX + 160, self.firstButtonY + 60)
 
     def startFight(self):
+        self.player.disable()
         while self.running:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -44,7 +45,7 @@ class fightInterface:
                         self.button4 = AttackTypeButton(self.firstButtonX + 160, self.firstButtonY + 60, 10,
                                                         "Danse Flammes")
                     if self.button4.rect.collidepoint(event.pos):
-                        self.player.change_map = self.player.previous_map
+                        self.player.enable()
                         self.running = False
 
 
@@ -66,3 +67,6 @@ class fightInterface:
             wildLife.drawWildPoke(self.screen.get_display(), self.squareX, self.squareY)
             ourPokeLife.drawOurPoke(self.screen.get_display(), self.squareX, self.squareY)
             self.screen.update()
+
+    def endFight(self):
+        self.running = True
