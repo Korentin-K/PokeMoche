@@ -1,7 +1,8 @@
 import pygame
-class BaseInterface:
-    def drawAll(self,screen,squareX,squareY,pokemonName):
 
+
+class BaseInterface:
+    def drawAll(self, screen, squareX, squareY, pokemonName):
         lines = ['Que doit faire', f'{pokemonName} ?']
         font = pygame.font.Font(f"../assets/font/PressStart2P-Regular.ttf", 14)
         baseImage = pygame.image.load(f"../assets/sprite/fight/backFight.png").convert_alpha()
@@ -21,10 +22,9 @@ class BaseInterface:
         pygame.draw.rect(screen, (0, 0, 0), (squareX + 380, squareY + 320, 250, 70), 2)
         screen.blit(pokeFloorSized, (squareX + 50, squareY + 440))
 
-        #englobe les buttons
-        pygame.draw.rect(screen, (254, 254, 226), (squareX,squareY+502,650,147))
-        pygame.draw.rect(screen, (0, 0, 0), (squareX+1, squareY + 503, 648, 146),2)
+        # englobe les buttons
+        pygame.draw.rect(screen, (254, 254, 226), (squareX, squareY + 502, 650, 147))
+        pygame.draw.rect(screen, (0, 0, 0), (squareX + 1, squareY + 503, 648, 146), 2)
         for i, line in enumerate(lines):
             text_render = font.render(line, True, (0, 0, 0))
             screen.blit(text_render, (squareX + 40, squareY + 570 + i * 20))
-

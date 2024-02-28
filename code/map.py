@@ -49,18 +49,22 @@ class Map:
                 ))  # recup infos de zone declenchement changement de carte
 
         if self.player:
-            self.pose_player(switch)
+            self.player.previous_map = self.current_map
+            self.pos_player(switch)
             self.player.align_hitbox()
             self.player.step = 16
             self.player.add_switchs(self.switchs)
             self.player.add_collisions(self.collisions)
             self.player.add_grass(self.grass)
             self.group.add(self.player)
-            if switch.name.split(" ")[0] != "zone1" and switch.name.split(" ")[0]!="zone2" and switch.name.split(" ")[0]!="zone3" and switch.name.split(" ")[0]!="zone4" and switch.name.split(" ")[0]!="zone5" and switch.name.split(" ")[0]!="zone6" and switch.name.split(" ")[0]!="zone7" and switch.name.split(" ")[0]!="zone8" and switch.name.split(" ")[0]!="zone9" and switch.name.split(" ")[0]!="zone10" and switch.name.split(" ")[0]!="zone11":
+            if switch.name.split(" ")[0] != "zone1" and switch.name.split(" ")[0] != "zone2" and switch.name.split(" ")[
+                0] != "zone3" and switch.name.split(" ")[0] != "zone4" and switch.name.split(" ")[0] != "zone5" and \
+                    switch.name.split(" ")[0] != "zone6" and switch.name.split(" ")[0] != "zone7" and \
+                    switch.name.split(" ")[0] != "zone8" and switch.name.split(" ")[0] != "zone9" and \
+                    switch.name.split(" ")[0] != "zone10" and switch.name.split(" ")[0] != "zone11":
                 self.player.switch_bike(True)
 
         self.current_map = switch
-
 
     def add_player(self, player):
         self.group.add(player)
@@ -73,13 +77,13 @@ class Map:
 
     def update(self):
         if self.player:
-            if self.player.change_map and self.player.step>=8:
+            if self.player.change_map and self.player.step >= 8:
                 self.switch_map(self.player.change_map)
                 self.player.change_map = None
         self.group.update()
         self.group.center(self.player.rect.center)
         self.group.draw(self.screen.display)
 
-    def pose_player(self, switch: Switch):
-        position = self.tmx_data.get_object_by_name("spawn "+self.current_map.name+" "+str(switch.port))
+    def pos_player(self, switch: Switch):
+        position = self.tmx_data.get_object_by_name("spawn " + self.current_map.name + " " + str(switch.port))
         self.player.position = pygame.math.Vector2(position.x, position.y)
