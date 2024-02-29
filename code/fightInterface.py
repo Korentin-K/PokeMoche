@@ -39,37 +39,24 @@ class fightInterface:
         showPlayerPokemon = ShowPokemon()
         buttonAttack1, buttonAttack2, buttonAttack3, buttonAttack4 = None, None, None, None
         self.player.disable()
-        while self.running and (self.playerPokeMoche.current_hp > 0 and self.randomPokeMoche.current_hp > 0):
+        while self.running and self.check_lost():
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self.running = False
                 elif event.type == pygame.MOUSEBUTTONDOWN:
                     if not buttonAttack1 is None and buttonAttack1.rect.collidepoint(event.pos):
                         self.start_fight(0)
-                        print("click1")
-                        self.playerPokeMoche.print_hp()
-                        self.randomPokeMoche.print_hp()
 
                     elif not buttonAttack2 is None and buttonAttack2.rect.collidepoint(event.pos):
                         self.start_fight(1)
-                        print("click2")
-                        self.playerPokeMoche.print_hp()
-                        self.randomPokeMoche.print_hp()
 
                     elif not buttonAttack3 is None and buttonAttack3.rect.collidepoint(event.pos):
                         self.start_fight(2)
-                        print("click3")
-                        self.playerPokeMoche.print_hp()
-                        self.randomPokeMoche.print_hp()
 
                     elif not buttonAttack4 is None and buttonAttack4.rect.collidepoint(event.pos):
                         self.start_fight(3)
-                        print("click4")
-                        self.playerPokeMoche.print_hp()
-                        self.randomPokeMoche.print_hp()
 
                     elif not self.firstButtonsUsed and self.attackButton.rect.collidepoint(event.pos):
-                        print("start")
                         self.firstButtonsUsed = True
                         # si le bouton d'attaque est appuyé remplace tout les bouton par les attaques
                         buttonAttack1 = AttackTypeButton(self.firstButtonX, self.firstButtonY,
@@ -87,7 +74,6 @@ class fightInterface:
                         self.screen.update()
 
                     elif not self.firstButtonsUsed and self.runAwayButton.rect.collidepoint(event.pos):
-                        print("fuite")
                         self.player.enable()
                         self.firstButtonsUsed = False
                         self.running = False
@@ -114,7 +100,6 @@ class fightInterface:
                 buttonAttack4.draw(self.screen.get_display())
 
             self.screen.update()
-        print("end battle")
         self.player.enable()
         self.running = False
         self.randomPokeMoche.heal()
@@ -123,56 +108,31 @@ class fightInterface:
     # si le bouton d'attaque est appuyé remplace tout les bouton par les attaques
     def start_fight(self, button_number):
         self.handle_damage(button_number)
-        print("damages done")
-
-    import random
 
     def handle_damage(self, button_number):
-        print("handle damage")
-
         def calculate_damage(attacker, defender, attack_number):
-            damage = attacker.attacks[attack_number].damage - defender.defence
-            return 0 if damage < 0 else damage
+            damage = max(0, attacker.attacks[attack_number].damage - defender.defence)
+            return damage
 
         def apply_damage(attacker, defender, attack_number):
             damage = calculate_damage(attacker, defender, attack_number)
             defender.decrease_hp(damage)
-            print(f"Defender's Defence: {defender.defence}")
-            print(f"Attacker's Attack Damage: {attacker.attacks[attack_number].damage}")
-            print(f"Calculated Damage: {damage}")
 
-            return self.check_lost()
+        player_speed, random_speed = self.playerPokeMoche.speed, self.randomPokeMoche.speed
 
-        player_speed = self.playerPokeMoche.speed
-        random_speed = self.randomPokeMoche.speed
-
-        if player_speed > random_speed:
+        if player_speed > random_speed or (player_speed == random_speed and random.choice([True, False])):
             apply_damage(self.randomPokeMoche, self.playerPokeMoche, button_number)
             if not self.check_lost():
                 rand = random.randint(0, 3)
                 apply_damage(self.playerPokeMoche, self.randomPokeMoche, rand)
-
-        elif player_speed == random_speed:
+        else:
             rand = random.randint(0, 3)
             apply_damage(self.playerPokeMoche, self.randomPokeMoche, rand)
             if not self.check_lost():
                 apply_damage(self.randomPokeMoche, self.playerPokeMoche, button_number)
 
-        else:
-            rand = random.randint(0, 1)
-            if rand == 1:
-                apply_damage(self.playerPokeMoche, self.randomPokeMoche, button_number)
-                if not self.check_lost():
-                    rand = random.randint(0, 3)
-                    apply_damage(self.randomPokeMoche, self.playerPokeMoche, rand)
-            else:
-                rand = random.randint(0, 3)
-                apply_damage(self.randomPokeMoche, self.playerPokeMoche, rand)
-                if not self.check_lost():
-                    apply_damage(self.playerPokeMoche, self.randomPokeMoche, button_number)
-
     def endFight(self):
         self.running = True
 
     def check_lost(self):
-        pass
+        return self.playerPokeMoche.current_hp > 0 and self.randomPokeMoche.current_hp > 0

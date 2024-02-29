@@ -40,7 +40,6 @@ class Map:
                 self.grass.append(pygame.Rect(obj.x, obj.y, obj.width, obj.height))
 
             type = obj.name.split(" ")[0]
-            print(type)
 
             if type == "switch":
                 self.switchs.append(Switch(

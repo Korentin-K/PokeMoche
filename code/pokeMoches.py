@@ -15,6 +15,3 @@ class pokeMoches:
             self.current_hp = self.max_hp
         else:
             self.current_hp += hp
-
-    def print_hp(self):
-        print(f"{self.name}'s HP: {self.current_hp}/{self.max_hp}")

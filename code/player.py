@@ -18,10 +18,11 @@ class Player(Entity):
         self.enabled = True
         self.pokeDollars: int = 0
         self.nbMoves = 0
-        self.attacks = [Attack("charge", 10), Attack("charge2", 10), Attack("charge3", 10), Attack("charge4", 10)]
+        self.attacks1 = [Attack("Charge", 10), Attack("Ecrasement", 20), Attack("Ecras'Face", 10), Attack("Tranche", 15)]
+        self.attacks2 = [Attack("Charge", 10), Attack("Morsure", 15), Attack("Mâchouille", 20), Attack("Coup Bas", 10)]
 
-        self.playerPokeMoche = pokeMoches("Poussifeu", 50, 5, 10, self.attacks)
-        self.randomPokeMoche = pokeMoches("Poussifeu", 20, 5, 10, self.attacks)
+        self.playerPokeMoche = pokeMoches("Poussifeu", 30, 6, 10, self.attacks1)
+        self.randomPokeMoche = pokeMoches("Medhyena", 25, 5, 10, self.attacks2)
         self.spriteSheet_bike: pygame.image = pygame.image.load("../assets/sprite/hero_01_red_m_cycle_roll.png")
         self.fightInterface = fightInterface(self)
         self.switchs: list[Switch] | None = None
