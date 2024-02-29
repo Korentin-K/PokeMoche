@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="40" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="88">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="40" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="90">
  <tileset firstgid="1" source="tileset/route104.tsx"/>
  <layer id="1" name="Calque de Tuiles 1" width="40" height="45">
   <data encoding="csv">
@@ -52,7 +52,7 @@
  </layer>
  <group id="2" name="object">
   <objectgroup id="7" name="grass">
-   <object id="72" name="grass" x="320" y="336" width="160" height="32"/>
+   <object id="72" name="grass" x="335.813" y="321.669" width="123.926" height="13.7158"/>
    <object id="73" name="grass" x="336" y="320" width="112"/>
    <object id="74" name="grass" x="400" y="304" width="48" height="16"/>
    <object id="75" name="grass" x="336" y="368" width="96" height="32"/>
@@ -60,10 +60,12 @@
    <object id="80" name="grass" x="352" y="400" width="48" height="32"/>
    <object id="81" name="grass" x="112" y="96" width="48" height="48"/>
    <object id="82" name="grass" x="128" y="144" width="32" height="32"/>
-   <object id="83" name="grass" x="176" y="176" width="128" height="16"/>
+   <object id="83" name="grass" x="177.636" y="175.019" width="128" height="16"/>
    <object id="85" name="grass" x="160" y="160" width="128"/>
    <object id="86" name="grass" x="192" y="96" width="64" height="32"/>
    <object id="87" name="grass" x="256" y="112" width="16" height="16"/>
+   <object id="88" name="grass" x="320.771" y="335.848" width="160" height="32"/>
+   <object id="89" name="grass" x="157.139" y="158.836" width="128" height="16"/>
   </objectgroup>
   <objectgroup id="6" name="collision">
    <object id="10" name="collision" x="0" y="0" width="640" height="48"/>
@@ -127,19 +129,19 @@
   </objectgroup>
   <objectgroup id="3" name="interface">
    <object id="1" name="switch zone5 4" x="624" y="416" width="16" height="48"/>
-   <object id="2" name="spawn zone5 4" x="597.776" y="447.443">
+   <object id="2" name="spawn zone5 4" x="617.049" y="442.501">
     <point/>
    </object>
   </objectgroup>
   <objectgroup id="4" name="interface2">
    <object id="5" name="switch zone8 1" x="160" y="48" width="32" height="16"/>
-   <object id="7" name="spawn zone8 1" x="173.462" y="107.635">
+   <object id="7" name="spawn zone8 1" x="176.406" y="82.119">
     <point/>
    </object>
   </objectgroup>
   <objectgroup id="5" name="interface3">
    <object id="8" name="switch zone8 2" x="512" y="112" width="32" height="16"/>
-   <object id="9" name="spawn zone8 2" x="525.723" y="169.014">
+   <object id="9" name="spawn zone8 2" x="527.206" y="142.329">
     <point/>
    </object>
   </objectgroup>

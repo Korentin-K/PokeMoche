@@ -96,7 +96,7 @@
    </object>
    <object id="4" name="switch zone11 0" x="608" y="144" width="32" height="48"/>
   </objectgroup>
-  <objectgroup id="5" name="collision" visible="0">
+  <objectgroup id="5" name="collision">
    <object id="5" name="collision" x="32" y="640" width="16" height="240"/>
    <object id="6" name="collision" x="48" y="864" width="144" height="16"/>
    <object id="7" name="collision" x="176" y="880" width="16" height="80"/>
@@ -131,8 +131,8 @@
    <object id="40" name="collision" x="384" y="528" width="16" height="32"/>
    <object id="41" name="collision" x="408.006" y="568.125"/>
    <object id="42" name="collision" x="384" y="672" width="96" height="48"/>
-   <object id="43" name="collision" x="384" y="720" width="16" height="32"/>
-   <object id="44" name="collision" x="464" y="720" width="16" height="32"/>
+   <object id="43" name="collision" x="384" y="720" width="30.9533" height="32"/>
+   <object id="44" name="collision" x="434.093" y="720" width="45.9065" height="32"/>
    <object id="45" name="collision" x="496" y="624" width="64" height="128"/>
    <object id="46" name="collision" x="432" y="608" width="48" height="48"/>
    <object id="47" name="collision" x="310.749" y="793.477"/>
@@ -141,8 +141,8 @@
    <object id="50" name="collision" x="176" y="592" width="16" height="32"/>
    <object id="51" name="collision" x="199.259" y="616.753"/>
    <object id="52" name="collision" x="144" y="400" width="144" height="48"/>
-   <object id="53" name="collision" x="272" y="448" width="16" height="48"/>
-   <object id="54" name="collision" x="144" y="448" width="16" height="48"/>
+   <object id="53" name="collision" x="225.645" y="448" width="62.3551" height="48"/>
+   <object id="54" name="collision" x="144" y="448" width="60.1121" height="48"/>
    <object id="55" name="collision" x="32" y="640" width="80" height="16"/>
    <object id="56" name="collision" x="96" y="128" width="16" height="528"/>
    <object id="57" name="collision" x="112" y="368" width="176" height="16"/>
