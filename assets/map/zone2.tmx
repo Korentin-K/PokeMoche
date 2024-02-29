@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="103">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="106">
  <tileset firstgid="1" source="tileset/route101.tsx"/>
  <layer id="1" name="Calque de Tuiles 1" width="20" height="20">
   <data encoding="csv">
@@ -26,6 +26,11 @@
 </data>
  </layer>
  <group id="2" name="object">
+  <objectgroup id="7" name="jump_down">
+   <object id="103" name="jump_down" x="32" y="112" width="80" height="16"/>
+   <object id="104" name="jump_down" x="111.023" y="96" width="64.9765" height="16"/>
+   <object id="105" name="jump_down" x="128" y="208" width="64" height="16"/>
+  </objectgroup>
   <objectgroup id="6" name="grass">
    <object id="88" name="grass" x="0" y="64" width="32" height="32"/>
    <object id="89" name="grass" x="30.5" y="33" width="48.5" height="61.5"/>
@@ -49,10 +54,7 @@
     <point/>
    </object>
   </objectgroup>
-  <objectgroup id="5" name="collisions">
-   <object id="9" name="collision" x="32" y="112" width="80" height="16"/>
-   <object id="10" name="collision" x="96" y="96" width="96" height="16"/>
-   <object id="12" name="collision" x="128.614" y="211.688" width="59.0826" height="16"/>
+  <objectgroup id="5" name="collisions" visible="0">
    <object id="13" name="collision" x="0" y="96" width="32" height="128"/>
    <object id="14" name="collision" x="32" y="128" width="32" height="80"/>
    <object id="15" name="collision" x="0" y="0" width="32" height="64"/>

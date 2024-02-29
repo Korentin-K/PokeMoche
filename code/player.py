@@ -115,6 +115,11 @@ class Player(Entity):
                 return True
         return False
 
+    def check_jump_down(self, temp_hitbox: pygame.Rect):
+        for jump_rect in self.jump:
+            if temp_hitbox.colliderect(jump_rect)and self.player.move_down():
+                return True
+            return False
     def enable(self):
         self.enabled = True
         self.in_combat = False
@@ -123,3 +128,8 @@ class Player(Entity):
     def disable(self):
         self.enabled = False
         self.in_combat = False
+
+
+
+
+

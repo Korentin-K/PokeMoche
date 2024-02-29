@@ -32,12 +32,19 @@ class Map:
         self.switchs = []
         self.collisions = []
         self.grass = []
+        self.jump = []
 
         for obj in self.tmx_data.objects:
             if obj.name == "collision":
                 self.collisions.append(pygame.Rect(obj.x, obj.y, obj.width, obj.height))
             if obj.name == "grass":
                 self.grass.append(pygame.Rect(obj.x, obj.y, obj.width, obj.height))
+            if obj.name == "jump_down":
+                self.jump.append(pygame.Rect(obj.x, obj.y, obj.width, obj.height))
+                if self.player.check_jump_down() == True:
+                    self.player.move_down()
+                else:
+                    self.player.speed = 0
 
             type = obj.name.split(" ")[0]
             print(type)
@@ -80,6 +87,7 @@ class Map:
             if self.player.change_map and self.player.step >= 8:
                 self.switch_map(self.player.change_map)
                 self.player.change_map = None
+
         self.group.update()
         self.group.center(self.player.rect.center)
         self.group.draw(self.screen.display)
