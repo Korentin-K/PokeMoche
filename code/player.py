@@ -7,6 +7,8 @@ from keylistener import KeyListener
 from screen import Screen
 from switch import Switch
 from fightInterface import fightInterface
+from pokeMoches import pokeMoches
+from attacks import Attack
 
 
 class Player(Entity):
@@ -16,8 +18,12 @@ class Player(Entity):
         self.enabled = True
         self.pokeDollars: int = 0
         self.nbMoves = 0
+        self.attacks = [Attack("charge", 10), Attack("charge2", 10), Attack("charge3", 10), Attack("charge4", 10)]
+
+        self.playerPokeMoche = pokeMoches("Poussifeu", 50, 5, 10, self.attacks)
+        self.randomPokeMoche = pokeMoches("Poussifeu", 20, 5, 10, self.attacks)
         self.spriteSheet_bike: pygame.image = pygame.image.load("../assets/sprite/hero_01_red_m_cycle_roll.png")
-        self.fightInterface = fightInterface("Dracaufeu", "Tortank", self)
+        self.fightInterface = fightInterface(self)
         self.switchs: list[Switch] | None = None
         self.collisions: list[pygame.Rect] | None = None
         self.change_map: Switch | None = None
@@ -33,8 +39,11 @@ class Player(Entity):
     def check_move(self) -> None:
         if not self.enabled or self.in_combat:
             return
-
-        rand = random.randint(1, self.MAX_MOVES)
+        if self.playerPokeMoche.current_hp > 0:
+            max_rand = int(self.MAX_MOVES - self.nbMoves / 2) if int(self.MAX_MOVES - self.nbMoves / 2) > 1 else 2
+            rand = random.randint(1, max_rand)
+        else:
+            rand = 10000000
         if not self.animation_walk:
             temp_hitbox = self.hitbox.copy()
 
@@ -51,12 +60,17 @@ class Player(Entity):
                     temp_hitbox.y += dy
 
                     if not self.check_collisions(temp_hitbox):
-                        if self.check_grass(temp_hitbox) and (rand == 1 or self.nbMoves == self.MAX_MOVES):
-                            self.fightInterface.startFight()
+                        if self.check_grass(temp_hitbox) and (
+                                rand == 1 or self.nbMoves == self.MAX_MOVES) and self.playerPokeMoche.current_hp > 0:
+                            self.fightInterface.launch_fight()
                             self.fightInterface.endFight()
+                            self.nbMoves = 0
                             break
                         else:
-                            self.nbMoves += 1
+                            if self.playerPokeMoche.current_hp <= 0:
+                                print("go to a pokeMoche Center to heal your pokeMoche")
+                            else:
+                                self.nbMoves += 1
                             self.check_collisions_switchs(temp_hitbox)
                             self.move_direction(direction)
                     else:
@@ -81,6 +95,8 @@ class Player(Entity):
             for switch in self.switchs:
                 if switch.check_collision(temp_hitbox):
                     self.change_map = switch
+                    if self.change_map.name.startswith("centrePokemon"):
+                        self.playerPokeMoche.heal()
         return None
 
     def check_input(self):

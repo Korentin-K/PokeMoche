@@ -2,11 +2,10 @@ import pygame
 
 
 class AttackTypeButton:
-    def __init__(self, x, y, damagePoints, attackName):
-        self.damagePoints = damagePoints
+    def __init__(self, x, y, attack):
+        self.attack = attack
         self.x = x
         self.y = y
-        self.text = attackName
         self.font = pygame.font.Font(f"../assets/font/PressStart2P-Regular.ttf", 14)
         self.width = 150
         self.height = 50
@@ -16,7 +15,7 @@ class AttackTypeButton:
 
     def draw(self, screen):
         pygame.draw.rect(screen, self.color, (self.x, self.y, self.width, self.height))
-        text_surface = self.font.render(self.text, True, self.text_color)
+        text_surface = self.font.render(self.attack.name, True, self.text_color)
         text_rect = text_surface.get_rect(center=(self.x + self.width // 2, self.y + self.height // 2))
         screen.blit(text_surface, text_rect)
 
