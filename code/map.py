@@ -87,7 +87,6 @@ class Map:
             if self.player.change_map and self.player.step >= 8:
                 self.switch_map(self.player.change_map)
                 self.player.change_map = None
-
         self.group.update()
         self.group.center(self.player.rect.center)
         self.group.draw(self.screen.display)

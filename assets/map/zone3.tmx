@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="26">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="34">
  <tileset firstgid="1" source="tileset/map2.tsx"/>
  <layer id="1" name="Calque de Tuiles 1" width="20" height="20">
   <data encoding="csv">
@@ -64,10 +64,18 @@
    <object id="20" name="collision" x="256" y="32" width="64" height="32"/>
    <object id="21" name="collision" x="288" y="64" width="32" height="64"/>
    <object id="22" name="collision" x="316" y="128" width="10" height="64"/>
+   <object id="26" name="collision" x="223.42" y="207.055" width="64" height="64.3839"/>
+   <object id="27" name="collision" x="75.6333" y="245.257" width="19.9428" height="25.346"/>
+   <object id="28" name="collision" x="113.277" y="240.795" width="29.4235" height="31.4805"/>
+   <object id="29" name="collision" x="73.4026" y="207.334" width="64" height="43.7496"/>
+   <object id="30" name="collision" x="63.9219" y="63.73" width="64" height="64.3839"/>
+   <object id="31" name="collision" x="208.92" y="48.1148" width="64" height="45.9803"/>
+   <object id="32" name="collision" x="239.593" y="79.624" width="29.4235" height="31.4805"/>
+   <object id="33" name="collision" x="208.084" y="86.0374" width="15.4813" height="25.346"/>
   </objectgroup>
   <objectgroup id="8" name="interface5">
    <object id="24" name="switch zone6 7" x="137" y="1" width="48" height="16"/>
-   <object id="25" name="spawn zone6 7" x="159" y="54">
+   <object id="25" name="spawn zone6 7" x="161.788" y="35.0387">
     <point/>
    </object>
   </objectgroup>
