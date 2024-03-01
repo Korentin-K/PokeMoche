@@ -78,10 +78,10 @@
    <object id="17" name="collision" x="480" y="96" width="32" height="48"/>
    <object id="18" name="collision" x="480" y="144" width="16" height="48"/>
    <object id="20" name="collision" x="512" y="288" width="32" height="64"/>
-   <object id="21" name="collision" x="448" y="224" width="16" height="112"/>
-   <object id="22" name="collision" x="448" y="320" width="48" height="16"/>
-   <object id="23" name="collision" x="480" y="336" width="15.4781" height="29.6042"/>
-   <object id="24" name="collision" x="480" y="352" width="64" height="16"/>
+   <object id="21" name="jump_left" x="448" y="224" width="16" height="112"/>
+   <object id="22" name="jump_down" x="448" y="320" width="48" height="16"/>
+   <object id="23" name="jump_left" x="480" y="336" width="15.4781" height="29.6042"/>
+   <object id="24" name="jump_down" x="480" y="352" width="64" height="16"/>
    <object id="25" name="collision" x="544" y="96" width="96" height="304"/>
    <object id="26" name="collision" x="576" y="400" width="64" height="16"/>
    <object id="27" name="collision" x="576" y="464" width="64" height="256"/>

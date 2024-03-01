@@ -64,10 +64,10 @@
    <object id="18" name="collision" x="288" y="64" width="96" height="32"/>
    <object id="19" name="collision" x="320" y="96" width="64" height="32"/>
    <object id="20" name="collision" x="184" y="154.667"/>
-   <object id="21" name="collision" x="64" y="192" width="160" height="16"/>
-   <object id="23" name="collision" x="96" y="80" width="112" height="16"/>
-   <object id="25" name="collision" x="208" y="82.6667" width="9.33333" height="32"/>
-   <object id="26" name="collision" x="220" y="96" width="96" height="16"/>
+   <object id="21" name="jump_down" x="64" y="192" width="160" height="16"/>
+   <object id="23" name="jump_down" x="96" y="80" width="112" height="16"/>
+   <object id="25" name="jump_left" x="208" y="82.6667" width="9.33333" height="32"/>
+   <object id="26" name="jump_down" x="220" y="96" width="96" height="16"/>
   </objectgroup>
  </group>
 </map>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="48" height="44" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="132">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="48" height="44" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="133">
  <tileset firstgid="1" source="tileset/bois-clementi.tsx"/>
  <layer id="1" name="Calque de Tuiles 1" width="48" height="44">
   <data encoding="csv">
@@ -117,7 +117,7 @@
    <object id="13" name="collision" x="288" y="128" width="96" height="32"/>
    <object id="14" name="collision" x="448" y="160" width="96" height="32"/>
    <object id="15" name="collision" x="592" y="96" width="64" height="64"/>
-   <object id="16" name="collision" x="656" y="128" width="80" height="16"/>
+   <object id="16" name="jump_down" x="656" y="128" width="80" height="16"/>
    <object id="17" name="collision" x="704" y="64" width="64" height="32"/>
    <object id="18" name="collision" x="736" y="96" width="32" height="512"/>
    <object id="19" name="collision" x="736" y="608" width="32" height="96"/>
@@ -136,7 +136,7 @@
    <object id="35" name="collision" x="288" y="608" width="32" height="16"/>
    <object id="36" name="collision" x="224" y="608" width="32" height="16"/>
    <object id="37" name="collision" x="224" y="640" width="32" height="64"/>
-   <object id="38" name="collision" x="512" y="512" width="64" height="16"/>
+   <object id="38" name="jump_down" x="512" y="512" width="64" height="16"/>
    <object id="40" name="collision" x="288" y="192" width="352" height="32"/>
    <object id="41" name="collision" x="304" y="224" width="352" height="32"/>
    <object id="42" name="collision" x="448" y="256" width="224" height="64"/>
@@ -147,8 +147,8 @@
    <object id="47" name="collision" x="352" y="448" width="96" height="64"/>
    <object id="48" name="collision" x="416" y="512" width="32" height="32"/>
    <object id="49" name="collision" x="256" y="320" width="160" height="64"/>
-   <object id="50" name="collision" x="192" y="352" width="64" height="16"/>
-   <object id="51" name="collision" x="224" y="224" width="80" height="16"/>
+   <object id="50" name="jump_down" x="192" y="352" width="64" height="16"/>
+   <object id="51" name="jump_down" x="224" y="224" width="80" height="16"/>
    <object id="52" name="collision" x="183.524" y="134.816"/>
    <object id="53" name="collision" x="0" y="96" width="192" height="32"/>
    <object id="54" name="collision" x="0" y="128" width="64" height="576"/>
@@ -157,7 +157,7 @@
    <object id="57" name="collision" x="128" y="192" width="96" height="64"/>
    <object id="58" name="collision" x="160" y="448" width="96" height="64"/>
    <object id="59" name="collision" x="234.841" y="521.868"/>
-   <object id="60" name="collision" x="256" y="480" width="96" height="16"/>
+   <object id="60" name="jump_down" x="256" y="480" width="96" height="16"/>
    <object id="61" name="collision" x="64" y="544" width="32" height="160"/>
    <object id="62" name="collision" x="96" y="576" width="128" height="128"/>
    <object id="126" name="grass" x="655.383" y="112.33" width="31.7233" height="16.7392"/>
@@ -166,6 +166,7 @@
    <object id="129" name="grass" x="415.835" y="143.776" width="15.5376" height="16.7392"/>
    <object id="130" name="grass" x="400.111" y="303.784" width="15.5376" height="16.7392"/>
    <object id="131" name="grass" x="111.543" y="239.966" width="15.5376" height="16.7392"/>
+   <object id="132" name="jump_down" x="669.614" y="318.997" width="65.331" height="16"/>
   </objectgroup>
   <objectgroup id="2" name="interface">
    <object id="1" name="switch zone7 1" x="256" y="688" width="32" height="16"/>

@@ -39,15 +39,10 @@ class Map:
                 self.collisions.append(pygame.Rect(obj.x, obj.y, obj.width, obj.height))
             if obj.name == "grass":
                 self.grass.append(pygame.Rect(obj.x, obj.y, obj.width, obj.height))
-            if obj.name == "jump_down":
+            if obj.name == "jump_down" or obj.name == "jump_left" or obj.name == "jump_right" or obj.name == "jump_up":
                 self.jump.append(pygame.Rect(obj.x, obj.y, obj.width, obj.height))
-                if self.player.check_jump_down() == True:
-                    self.player.move_down()
-                else:
-                    self.player.speed = 0
 
             type = obj.name.split(" ")[0]
-            print(type)
 
             if type == "switch":
                 self.switchs.append(Switch(
@@ -63,6 +58,7 @@ class Map:
             self.player.add_switchs(self.switchs)
             self.player.add_collisions(self.collisions)
             self.player.add_grass(self.grass)
+            self.player.add_jump(self.jump)
             self.group.add(self.player)
             if switch.name.split(" ")[0] != "zone1" and switch.name.split(" ")[0] != "zone2" and switch.name.split(" ")[
                 0] != "zone3" and switch.name.split(" ")[0] != "zone4" and switch.name.split(" ")[0] != "zone5" and \

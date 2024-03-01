@@ -18,7 +18,8 @@ class Player(Entity):
         self.enabled = True
         self.pokeDollars: int = 0
         self.nbMoves = 0
-        self.attacks1 = [Attack("Charge", 10), Attack("Ecrasement", 20), Attack("Ecras'Face", 10), Attack("Tranche", 15)]
+        self.attacks1 = [Attack("Charge", 10), Attack("Ecrasement", 20), Attack("Ecras'Face", 10),
+                         Attack("Tranche", 15)]
         self.attacks2 = [Attack("Charge", 10), Attack("Morsure", 15), Attack("Mâchouille", 20), Attack("Coup Bas", 10)]
 
         self.playerPokeMoche = pokeMoches("Poussifeu", 30, 6, 10, self.attacks1)
@@ -29,6 +30,7 @@ class Player(Entity):
         self.collisions: list[pygame.Rect] | None = None
         self.change_map: Switch | None = None
         self.grass: list[pygame.Rect] | None = None
+        self.jump: list[pygame.Rect] | None = None
         self.previous_map: Switch | None = None
         self.MAX_MOVES = 25
 
@@ -73,19 +75,19 @@ class Player(Entity):
                             else:
                                 self.nbMoves += 1
                             self.check_collisions_switchs(temp_hitbox)
-                            self.move_direction(direction)
+                            self.move_direction(temp_hitbox, direction)
                     else:
                         self.direction = direction
                     break
 
-    def move_direction(self, direction: str) -> None:
+    def move_direction(self, temp_hitbox, direction: str) -> None:
         if direction == "left":
             self.move_left()
         elif direction == "right":
             self.move_right()
         elif direction == "up":
             self.move_up()
-        elif direction == "down":
+        elif direction == "down" and not self.check_jump_down(temp_hitbox, direction):
             self.move_down()
 
     def add_switchs(self, switchs: list[Switch]):
@@ -132,11 +134,13 @@ class Player(Entity):
                 return True
         return False
 
-    def check_jump_down(self, temp_hitbox: pygame.Rect):
+    def check_jump_down(self, temp_hitbox: pygame.Rect, direction):
         for jump_rect in self.jump:
-            if temp_hitbox.colliderect(jump_rect)and self.player.move_down():
+            print(jump_rect)
+            if temp_hitbox.colliderect(jump_rect) and direction == "down":
                 return True
             return False
+
     def enable(self):
         self.enabled = True
         self.in_combat = False
@@ -146,7 +150,5 @@ class Player(Entity):
         self.enabled = False
         self.in_combat = False
 
-
-
-
-
+    def add_jump(self, jump):
+        self.jump = jump

@@ -73,17 +73,17 @@
    <object id="9" name="collision" x="0" y="192" width="96" height="128"/>
    <object id="10" name="collision" x="96" y="288" width="288" height="32"/>
    <object id="11" name="collision" x="160" y="256" width="128" height="32"/>
-   <object id="12" name="collision" x="128" y="208" width="66.6413" height="18.0091"/>
+   <object id="12" name="jump_down" x="128" y="208" width="66.6413" height="18.0091"/>
    <object id="14" name="collision" x="160" y="176" width="32" height="32"/>
    <object id="15" name="collision" x="192" y="128" width="64" height="128"/>
    <object id="16" name="collision" x="224" y="96" width="32" height="32"/>
    <object id="17" name="collision" x="256" y="96" width="32" height="16"/>
-   <object id="18" name="collision" x="320" y="96" width="96" height="16"/>
+   <object id="18" name="jump_down" x="320" y="96" width="96" height="16"/>
    <object id="19" name="collision" x="336" y="208" width="32" height="32"/>
    <object id="20" name="collision" x="368" y="224" width="32" height="32"/>
    <object id="22" name="collision" x="128" y="0" width="672" height="32"/>
    <object id="25" name="collision" x="448" y="32" width="128" height="32"/>
-   <object id="26" name="collision" x="551.239" y="64" width="10.9691" height="75.1444"/>
+   <object id="26" name="jump_right" x="551.239" y="64" width="10.9691" height="75.1444"/>
    <object id="28" name="collision" x="480" y="96" width="32" height="96"/>
    <object id="29" name="collision" x="416" y="112" width="64" height="96"/>
    <object id="30" name="collision" x="512" y="128" width="32" height="32"/>

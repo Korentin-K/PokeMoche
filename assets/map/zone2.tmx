@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="106">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="110">
  <tileset firstgid="1" source="tileset/route101.tsx"/>
  <layer id="1" name="Calque de Tuiles 1" width="20" height="20">
   <data encoding="csv">
@@ -41,12 +41,14 @@
    <object id="94" name="grass" x="192" y="48" width="16" height="48"/>
    <object id="95" name="grass" x="208" y="144" width="32" height="80"/>
    <object id="96" name="grass" x="176" y="160" width="32" height="48"/>
-   <object id="97" name="grass" x="240" y="176" width="32" height="48"/>
+   <object id="97" name="grass" x="240.981" y="158.839" width="16.8004" height="18.0912"/>
    <object id="98" name="grass" x="224" y="224" width="32" height="32"/>
    <object id="99" name="grass" x="0" y="224" width="80" height="32"/>
    <object id="100" name="grass" x="32" y="256" width="48" height="32"/>
    <object id="101" name="grass" x="80" y="240" width="16" height="32"/>
    <object id="102" name="grass" x="32" y="208" width="32" height="16"/>
+   <object id="106" name="grass" x="240.431" y="176.046" width="32" height="48"/>
+   <object id="107" name="grass" x="256.857" y="96.3708" width="16.8004" height="18.0912"/>
   </objectgroup>
   <objectgroup id="4" name="interface2">
    <object id="3" name="switch zone3 0" x="128" y="0" width="64" height="16"/>
@@ -54,7 +56,7 @@
     <point/>
    </object>
   </objectgroup>
-  <objectgroup id="5" name="collisions" visible="0">
+  <objectgroup id="5" name="collisions">
    <object id="13" name="collision" x="0" y="96" width="32" height="128"/>
    <object id="14" name="collision" x="32" y="128" width="32" height="80"/>
    <object id="15" name="collision" x="0" y="0" width="32" height="64"/>
@@ -69,6 +71,8 @@
    <object id="24" name="collision" x="224" y="256" width="64" height="64"/>
    <object id="25" name="collision" x="0" y="256" width="32" height="64"/>
    <object id="26" name="collision" x="32" y="288" width="128" height="32"/>
+   <object id="108" name="collision" x="319.861" y="93.8292" width="6.99425" height="131.042"/>
+   <object id="109" name="collision" x="-16" y="63.4302" width="15.3295" height="189.389"/>
   </objectgroup>
   <objectgroup id="3" name="interface">
    <object id="1" name="spawn zone1 0" x="164.118" y="291.971">
